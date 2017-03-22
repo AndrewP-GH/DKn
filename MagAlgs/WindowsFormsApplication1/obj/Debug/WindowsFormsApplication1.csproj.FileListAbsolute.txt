@@ -1,0 +1,12 @@
+C:\Users\Hulk\Source\Repos\sha1\MagAlgs\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Hulk\Source\Repos\sha1\MagAlgs\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Hulk\Source\Repos\sha1\MagAlgs\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Hulk\Source\Repos\sha1\MagAlgs\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Users\Hulk\Source\Repos\sha1\MagAlgs\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Hulk\Source\Repos\sha1\MagAlgs\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Hulk\Source\Repos\sha1\MagAlgs\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\Hulk\Source\Repos\sha1\MagAlgs\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Hulk\Source\Repos\sha1\MagAlgs\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Hulk\Source\Repos\DKn\MagAlgs\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Hulk\Source\Repos\DKn\MagAlgs\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Hulk\Source\Repos\DKn\MagAlgs\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
