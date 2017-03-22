@@ -16,7 +16,7 @@ namespace WindowsFormsApplication1
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             //for (var i = 0; i != _works.Length; ++i)
-            //    comboBox1.Items.Add((string)_works[i].GetMethod("ItemText").Invoke(null, null)); ?
+            //    comboBox1.Items.Add((string)_works[i].GetMethod("ItemText").Invoke(null, null));
         }
 
         private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
