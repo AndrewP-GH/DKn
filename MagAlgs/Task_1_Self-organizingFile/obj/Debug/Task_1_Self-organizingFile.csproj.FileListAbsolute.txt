@@ -1,6 +1,0 @@
-C:\Users\Hulk\Source\Repos\sha1\MagAlgs\Task_1_Self-organizingFile\bin\Debug\Task_1_Self-organizingFile.exe.config
-C:\Users\Hulk\Source\Repos\sha1\MagAlgs\Task_1_Self-organizingFile\bin\Debug\Task_1_Self-organizingFile.exe
-C:\Users\Hulk\Source\Repos\sha1\MagAlgs\Task_1_Self-organizingFile\bin\Debug\Task_1_Self-organizingFile.pdb
-C:\Users\Hulk\Source\Repos\sha1\MagAlgs\Task_1_Self-organizingFile\obj\Debug\Task_1_Self-organizingFile.csprojResolveAssemblyReference.cache
-C:\Users\Hulk\Source\Repos\sha1\MagAlgs\Task_1_Self-organizingFile\obj\Debug\Task_1_Self-organizingFile.exe
-C:\Users\Hulk\Source\Repos\sha1\MagAlgs\Task_1_Self-organizingFile\obj\Debug\Task_1_Self-organizingFile.pdb
