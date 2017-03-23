@@ -5,10 +5,10 @@ using WindowsFormsApplication1.Properties;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         private readonly Type[] _works = null;
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             Resources.Culture = CultureInfo.CurrentCulture;
