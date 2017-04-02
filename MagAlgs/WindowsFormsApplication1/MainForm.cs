@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Linq;
 using System.Windows.Forms;
 using WindowsFormsApplication1.Properties;
 
@@ -7,7 +8,7 @@ namespace WindowsFormsApplication1
 {
     public partial class MainForm : Form
     {
-        private readonly Type[] _works = null;
+        private readonly Type[] _works = { typeof(Lab_1_SelfOrgFile) };
         public MainForm()
         {
             InitializeComponent();
@@ -15,8 +16,11 @@ namespace WindowsFormsApplication1
             StartPosition = FormStartPosition.Manual;
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
-            //for (var i = 0; i != _works.Length; ++i)
-            //    comboBox1.Items.Add((string)_works[i].GetMethod("ItemText").Invoke(null, null));
+            foreach (var work in _works)
+            {
+                comboBox1.Items.Add(work.GetMethod("ItemText").Invoke(null, null));
+            }
+                
         }
 
         private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)

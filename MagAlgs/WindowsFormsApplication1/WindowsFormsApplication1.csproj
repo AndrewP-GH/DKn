@@ -47,6 +47,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ILab.cs" />
+    <Compile Include="Lab_1_SelfOrgFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab_1_SelfOrgFile.Designer.cs">
+      <DependentUpon>Lab_1_SelfOrgFile.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
