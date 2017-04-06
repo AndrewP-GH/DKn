@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApplication1.Properties;
 
@@ -22,9 +23,18 @@ namespace WindowsFormsApplication1
                 
         }
 
-        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ОПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show(string.Format(Resources.Form1_оПрограммеToolStripMenuItem_Click_Лабораторная_работа_2017__0_Выполнил__Парамонов_А_А__1_Т3О___101М___16, Environment.NewLine), Resources.Form1_оПрограммеToolStripMenuItem_Click_О_программе, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var selectedForm = (Form)Activator.CreateInstance(_works[comboBox1.SelectedIndex]);
+            selectedForm.StartPosition = FormStartPosition.CenterScreen;
+            selectedForm.MaximizeBox = false;
+            //selectedForm.FormBorderStyle = FormBorderStyle.FixedDialog;
+            selectedForm.Show();
         }
     }
 }
