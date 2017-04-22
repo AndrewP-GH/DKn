@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Globalization;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApplication1.Properties;
 
@@ -19,8 +18,7 @@ namespace WindowsFormsApplication1
             foreach (var work in _works)
             {
                 comboBox1.Items.Add(work.GetMethod("ItemText").Invoke(null, null));
-            }
-                
+            }  
         }
 
         private void ОПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
@@ -33,7 +31,7 @@ namespace WindowsFormsApplication1
             var selectedForm = (Form)Activator.CreateInstance(_works[comboBox1.SelectedIndex]);
             selectedForm.StartPosition = FormStartPosition.CenterScreen;
             selectedForm.MaximizeBox = false;
-            //selectedForm.FormBorderStyle = FormBorderStyle.FixedDialog;
+            selectedForm.FormBorderStyle = FormBorderStyle.FixedDialog;
             selectedForm.Show();
         }
     }
