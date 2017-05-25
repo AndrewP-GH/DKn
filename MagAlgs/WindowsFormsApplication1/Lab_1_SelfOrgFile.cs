@@ -11,14 +11,12 @@ namespace WindowsFormsApplication1
 {
     public partial class Lab_1_SelfOrgFile : Form, ILab
     {
-        private List<ElementInSelfOrganaziList> _items = new List<ElementInSelfOrganaziList>();
+        private readonly List<ElementInSelfOrganaziList> _items = new List<ElementInSelfOrganaziList>();
         private string _fileName;
-        private string _filePath;
         public Lab_1_SelfOrgFile()
         {
             InitializeComponent();
         }
-
         public static string ItemText() => "Самоорганизующийся файл";
 
         string ILab.ItemText()
@@ -35,10 +33,9 @@ namespace WindowsFormsApplication1
                 {
                     _items.Clear();
                     openFileDialog.RestoreDirectory = true;
-                    using (var streamReader = new StreamReader(openFileDialog.FileName))
+                    using (var streamReader = new StreamReader(openFileDialog.FileName, Encoding.UTF8))
                     {
                         _fileName = openFileDialog.SafeFileName;
-                        _filePath = openFileDialog.FileName.Replace(_fileName, string.Empty);
                         string line;
                         while ((line = streamReader.ReadLine()) != null)
                         {
@@ -64,7 +61,7 @@ namespace WindowsFormsApplication1
                 saveFileDialog.FileName = _fileName;
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    using (var streamWriter = new StreamWriter(_fileName))
+                    using (var streamWriter = new StreamWriter(new FileStream(saveFileDialog.FileName, FileMode.OpenOrCreate, FileAccess.Write), Encoding.UTF8))
                     {
                         foreach (var item in _items)
                         {
@@ -89,7 +86,7 @@ namespace WindowsFormsApplication1
                         _items.RemoveAt(i);
                         _items.Insert(0, item);
                         UpdateTreeView();
-                        treeView1.Nodes[0].BackColor = Color.Chartreuse;
+                        //treeView1.Nodes[0].BackColor = Color.Chartreuse;
                         return;
                     }
                 }
@@ -104,17 +101,18 @@ namespace WindowsFormsApplication1
             var addKeyText = textBox1.Text.Trim();
             var addVal = textBox2.Text.Trim();
             int findKey;
-            if (!string.IsNullOrWhiteSpace(addKeyText) && !string.IsNullOrWhiteSpace(addVal) &&
-                int.TryParse(addKeyText, out findKey))
+            if (!string.IsNullOrWhiteSpace(addKeyText)
+                && !string.IsNullOrWhiteSpace(addVal)
+                && int.TryParse(addKeyText, out findKey))
             {
-                var elem = _items.Where(el => el.Key == findKey).ToArray();
-                if (elem.Any())
+                var elem = _items.FirstOrDefault(el => el.Key == findKey);
+                if (elem != null)
                 {
-                    elem[0].Value = addVal;
+                    elem.Value = addVal;
                 }
                 else
                 {
-                    _items.Add(new ElementInSelfOrganaziList(findKey, addVal));
+                    _items.Insert(0, new ElementInSelfOrganaziList(findKey, addVal));
                 }
                 UpdateTreeView();
             }
@@ -122,7 +120,7 @@ namespace WindowsFormsApplication1
                 MessageBox.Show("Некорректные входные значения.");
         }
 
-        private struct ElementInSelfOrganaziList
+        private class ElementInSelfOrganaziList
         {
             private int _key;
             private string _value;
@@ -153,6 +151,5 @@ namespace WindowsFormsApplication1
             treeView1.EndUpdate();
             treeView1.ExpandAll();
         }
-
     }
 }

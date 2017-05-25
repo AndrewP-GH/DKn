@@ -7,7 +7,8 @@ namespace WindowsFormsApplication1
 {
     public partial class MainForm : Form
     {
-        private readonly Type[] _works = { typeof(Lab_1_SelfOrgFile) };
+        private readonly Type[] _works = { typeof(Lab_1_SelfOrgFile), typeof(Lab_2_BinaryTree) };
+
         public MainForm()
         {
             InitializeComponent();
