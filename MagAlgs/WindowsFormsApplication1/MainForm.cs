@@ -31,7 +31,7 @@ namespace WindowsFormsApplication1
         {
             var selectedForm = (Form)Activator.CreateInstance(_works[comboBox1.SelectedIndex]);
             selectedForm.StartPosition = FormStartPosition.CenterScreen;
-            selectedForm.MaximizeBox = false;
+            //selectedForm.MaximizeBox = false;
             selectedForm.FormBorderStyle = FormBorderStyle.FixedDialog;
             selectedForm.Show();
         }

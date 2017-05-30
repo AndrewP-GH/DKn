@@ -13,10 +13,13 @@ namespace WindowsFormsApplication1
     {
         private readonly List<ElementInSelfOrganaziList> _items = new List<ElementInSelfOrganaziList>();
         private string _fileName;
+
         public Lab_1_SelfOrgFile()
         {
             InitializeComponent();
+            MaximizeBox = false;
         }
+
         public static string ItemText() => "Самоорганизующийся файл";
 
         string ILab.ItemText()
@@ -42,10 +45,10 @@ namespace WindowsFormsApplication1
                             var parts = line.Split(new[] { '|' }, StringSplitOptions.RemoveEmptyEntries);
                             if (parts.Length < 2)
                                 continue;
-                            var valueString = new StringBuilder(parts[1]);
+                            var keyString = new StringBuilder(parts[1]);
                             for (var i = 2; i < parts.Length; ++i)
-                                valueString.Append("|" + parts[i]);
-                            _items.Add(new ElementInSelfOrganaziList(int.Parse(parts[0]), valueString.ToString()));
+                                keyString.Append("|" + parts[i]);
+                            _items.Add(new ElementInSelfOrganaziList(int.Parse(parts[0]), keyString.ToString()));
                         }
                     }
                 }
@@ -125,10 +128,10 @@ namespace WindowsFormsApplication1
             private int _key;
             private string _value;
 
-            public ElementInSelfOrganaziList(int k, string val)
+            public ElementInSelfOrganaziList(int k, string value)
             {
                 _key = k;
-                _value = val;
+                _value = value;
             }
 
             public int Key => _key;
